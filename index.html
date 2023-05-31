@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    document.body.style.width = '350px'
+    document.body.style.margin = 'auto'
+    document.body.style.marginTop = '10px'
+
+
+    const text = document.createElement("div")
+    const item = document.createElement('item')
+
+    text.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum consectetur."
+    
+    text.append(item);
+    
+    text.style.border = '2px solid red';
+    text.style.borderRadius = '10px'
+    text.style.padding = '10px'
+    
+    
+    const ul = document.createElement('ul');
+    
+    const item_1 = document.createElement('li');
+    const link1 = document.createElement('a');
+    link1.textContent = 'intocode';
+    link1.href = 'https://intocode.ru/';
+    link1.target = '_blank';
+    item_1.appendChild(link1);
+
+    const item_2 = document.createElement('li');
+    const link2 = document.createElement('a');
+    link2.textContent = 'google';
+    link2.href = 'https://www.google.com/'
+    link2.target = '_blank';
+    item_2.appendChild(link2);
+
+    const item_3 = document.createElement('li');
+    const link3 = document.createElement('a');
+    link3.textContent = 'instagram'
+    link3.href = 'https://www.instagram.com/'
+    link3.target = '_blank';
+    item_3.appendChild(link3);
+
+    text.style.marginLeft = '40px'
+
+    ul.style.listStyleType = 'none'
+    ul.style.display = 'flex'
+    ul.style.justifyContent = 'space-between'
+
+    ul.append(item_1, item_2, item_3);    
+
+    
+    document.body.prepend(ul);
+    document.body.prepend(text);
+    </script>
+</body>
+</html>
